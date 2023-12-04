@@ -34,6 +34,9 @@ body,
 }
 .body-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 ul {
   list-style: none;
@@ -101,10 +104,13 @@ span.icon {
 span.icon svg {
   width: 1.5rem;
 }
+.projects {
+  display: flex;
+}
 .projects .project {
-  position: fixed;
-  width: 150px;
-  height: 200px;
+  position: absolute;
+  width: 200px;
+  height: 250px;
   bottom: 5rem;
   flex: none;
   left: var(--project-left);
@@ -336,11 +342,14 @@ span.icon svg {
   transition: all 0.8s ease;
   transform: translate3d(var(--counter-translateX), 0, 0);
 }
+.bottom-section {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
 .bottom {
-  position: fixed;
   bottom: 1rem;
-  left: 0;
-  width: 100vw;
   display: flex;
   justify-content: flex-end;
   z-index: 9;
@@ -351,7 +360,7 @@ span.icon svg {
 }
 .project-navigation > div {
   width: 2rem;
-  padding: 1rem;
+  padding: 0.5rem;
   pointer-events: visible;
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -434,7 +443,7 @@ span.icon svg {
   }
   .project-navigation > div {
     width: 3rem;
-    padding: 1.1rem;
+    padding: 1rem;
   }
   .project .content {
     font-size: 0.5rem;
